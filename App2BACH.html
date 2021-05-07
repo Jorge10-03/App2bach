@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+        <link rel="stylesheet" type="text/css" href="App2BACH.css" media="screen" />
+    
+    </head>
+
+    <body>
+      <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+          <ons-page>
+            <ons-list>
+              <ons-list-item onclick="fn.load('home.html')" tappable>
+                Lista de Tareas
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('about.html')" tappable>
+                Añadir Tarea
+              </ons-list-item>
+            </ons-list>
+          </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+      </ons-splitter>
+      
+      <template id="home.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              Lista de Tareas
+            </div>
+          </ons-toolbar>
+          <ons-fab position="bottom right" onclick="fn.load('about.html')">
+            <ons-icon icon="md-plus"></ons-icon>
+          </ons-fab>
+          <ons-toolbar>
+            <div class="center"><b>Tareas</b></div>
+          </ons-toolbar>
+        
+          <ons-list>
+            <ons-list-header>Tareas</ons-list-header>
+            <ons-list-item expandable>
+              Gravitación
+              <div class="expandable-content"><b>Asignatura:</b> Física
+              <br><br>
+               <b>Prioridad:</b> 2
+              <br><br>
+               <b>Fecha Límite:</b> 30/05
+              <br><br>
+              <ons-list-item tappable>
+                <label class="left">
+                  <ons-checkbox input-id="check-1"></ons-checkbox>
+                </label>
+                <label for="check-1" class="center">
+                  Completada
+                </label>
+              </ons-list-item>
+            </div>
+            </ons-list-item>
+
+            <ons-list-item expandable>
+              Dibujo de Pentágono
+              <div class="expandable-content"><b>Asignatura:</b> Dibujo
+              <br><br>
+               <b>Prioridad:</b> 3
+              <br><br>
+               <b>Fecha Límite:</b> 24/05
+              <br><br>
+              <ons-list-item tappable>
+                <label class="left">
+                  <ons-checkbox input-id="check-2"></ons-checkbox>
+                </label>
+                <label for="check-2" class="center">
+                  Completada
+                </label>
+              </ons-list-item>
+            </div>
+            </ons-list-item>            
+            
+            <ons-list-item expandable>
+              Sintaxis Subordinadas
+              <div class="expandable-content"><b>Asignatura:</b> Lengua
+              <br><br>
+               <b>Prioridad:</b> 2
+              <br><br>
+               <b>Fecha Límite:</b> 05/05
+              <br><br>
+              <ons-list-item tappable>
+                <label class="left">
+                  <ons-checkbox input-id="check-5"></ons-checkbox>
+                </label>
+                <label for="check-5" class="center">
+                  Completada
+                </label>
+            </ons-list-item>
+            </div>
+            </ons-list-item>
+
+            <ons-list-item expandable>
+              Fuentes Históricas
+              <div class="expandable-content"><b>Asignatura:</b> Historia
+              <br><br>
+               <b>Prioridad:</b> 2
+              <br><br>
+               <b>Fecha Límite:</b> 19/05
+              <br><br>
+              <ons-list-item tappable>
+                <label class="left">
+                  <ons-checkbox input-id="check-3"></ons-checkbox>
+                </label>
+                <label for="check-3" class="center">
+                  Completada
+                </label>
+              </ons-list-item>
+            </div>
+            </ons-list-item>    
+
+            <ons-list-item expandable>
+              Comentarios de Texto
+              <div class="expandable-content"><b>Asignatura:</b> Lengua
+              <br><br>
+               <b>Prioridad:</b> 1
+              <br><br>
+               <b>Fecha Límite:</b> 13/05
+              <br><br>
+              <ons-list-item tappable>
+                <label class="left">
+                  <ons-checkbox input-id="check-4"></ons-checkbox>
+                </label>
+                <label for="check-4" class="center">
+                  Completada
+                </label>
+              </ons-list-item>
+            </div>
+            </ons-list-item>            
+            
+            </div>
+            </ons-list-item>
+        </ons-page>
+      </template>
+      
+      <template id="about.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+              Añadir Tarea
+            </div>
+          </ons-toolbar>
+          <div style="text-align: center; margin-top: 30px;">
+            <form action="https://script.google.com/a/iesvaldebernardo.es/macros/s/AKfycbzVUjlbrmDkP5qIIOwZgmD-EADLKp5rSJtO4Is1tDYq/dev" method="POST" target="_blank">
+              <label for="FechadeFinalización">Fecha de Finalización:</label> 
+              <input type="text" name="Fecha de Finalización" modifier="underbar" float>
+              <br><br>
+              <label for="Descripción">Descripción:</label> 
+              <input type="text" name="Descripción" modifier="underbar" float>
+              <br><br>
+              <label for="Prioridad">Prioridad:</label> 
+              <select name="Descripción" modifier="underbar" onchange="editSelects(event)">
+                <option value="Prioridad1">1</option>
+                <option value="Prioridad2">2</option>
+                <option value="Prioridad3">3</option>
+              </select>
+              <br><br>
+              <label for="Categoria">Categoria:</label> 
+              <select name="Categoria" modifier="underbar" onchange="editSelects(event)">
+                <option value="Deberes">Deberes</option>
+                <option value="Examenes">Examenes</option>
+                <option value="Extraescolares">Extraescolares</option>
+              </select>
+              <br><br>
+              <label for="Asignatura">Asignatura:</label> 
+              <select name="Asignatura" modifier="underbar" onchange="editSelects(event)">
+                <option value="Lengua">Lengua</option>
+                <option value="Matematicas">Matematicas</option>
+                <option value="TEIC">TEIC</option>
+                <option value="Ingles">Ingles</option>
+                <option value="Fisica">Fisica</option>
+                <option value="Quimica">Quimica</option>
+                <option value="Dibujo">Dibujo</option>
+                <option value="Historia">Historia</option>
+              </select>
+              <br><br>
+              <button type="submit" >Añadir</button>
+          </div>
+        </ons-page>
+      </template>
+
+      <script src="onsenui.min.js"></script>         
+      <script src="App2BACH.js"></script> 
+
+      <h2>Probando Cliente</h2>
+      <div id="out"></div>
+      <script>
+
+      //llama a una url que responde un objeto JSON en una función callback
+      // realmente devuelve un código javascript
+      // esta funcion devuelve una Promesa, que se ejecuta al recibir los datos
+
+      const JSONP = (unique => url =>
+        new Promise(rs => {
+          const script = document.createElement('script');
+          const name = `_jsonp_${unique++}`;
+
+          if (url.match(/\?/)) {
+            url += `&callback=${name}`;
+          } else {
+            url += `?callback=${name}`;
+          }
+          console.log(url);
+          script.src = url;
+          window[name] = json => {
+            rs(json);
+            script.remove();
+            delete window[name];
+          };
+          document.body.appendChild(script);
+        })
+      )(0);
+
+      // comprueba que no ha habido errores
+      const checkSuccess = (json =>{
+        console.log("checkSuccess: ",json);
+          if(json.success) {
+          //   console.log("-->  SUCCESS: "+json.message+" serverTimeout: "+json.serverTimeout );
+              return Promise.resolve(json.data);}
+          else {return  Promise.reject('Se ha producido un error (SUCCESS false) '+json.message);}
+      })
+
+      // composicion de la url del comando a partir de los argumentos
+      const cmd_url = ((cmd,arg) =>{
+        const gascript_url ="https://script.google.com/a/iesvaldebernardo.es/macros/s/AKfycbywcfCEBEab3_4wcMNJ89Bm2q3SBD2TrAiOTwWHaZ8/dev";
+        var url = gascript_url+"?command="+cmd
+        if (typeof(arg) !=="undefined") url = url+'&arg='+JSON.stringify(arg)
+        console.log(url);
+        return url;
+        })
+
+      // llamada a la API
+      function APIcall(cmd,arg){
+          return JSONP(cmd_url(cmd,arg)).then(checkSuccess);
+}
+
+      </script>
+
+    </body>
+</html>
+
